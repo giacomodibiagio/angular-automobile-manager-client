@@ -14,6 +14,7 @@ import { AutomobileSearchComponent } from './automobile/automobile-search/automo
 import { AutomobileSearchResultsComponent } from './automobile/automobile-search-results/automobile-search-results.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { AutomobileDeleteComponent } from './automobile/automobile-delete/automobile-delete.component';
+import { AutomobileEditComponent } from './automobile/automobile-edit/automobile-edit.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AutomobileDeleteComponent } from './automobile/automobile-delete/automo
     AutomobileDetailComponent,
     AutomobileSearchComponent,
     AutomobileSearchResultsComponent,
-    AutomobileDeleteComponent
+    AutomobileDeleteComponent,
+    AutomobileEditComponent
   ],
   imports: [
     BrowserModule,
