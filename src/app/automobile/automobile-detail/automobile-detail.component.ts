@@ -13,13 +13,13 @@ export class AutomobileDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private automobileService: AutomobileService,
     private router: Router) { }
 
-  selectedAutomobile: Automobile = new Automobile;
+  selectedAutomobile!: Automobile;
   errorMessage: string = '';
   confirmMessage: string = '';
 
   ngOnInit(): void {
-    let idParam = +!this.route.snapshot.paramMap.get('id');
-    this.automobileService.getAutomobile(idParam).subscribe(
+    let idParam = this.route.snapshot.paramMap.get('id');
+    this.automobileService.getAutomobile(idParam as unknown as number).subscribe(
       (automobileItem: Automobile) => {
         this.selectedAutomobile = automobileItem;
         console.log(JSON.stringify(automobileItem))

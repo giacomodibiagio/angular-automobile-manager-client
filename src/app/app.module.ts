@@ -10,6 +10,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { AutomobileCreateComponent } from './automobile/automobile-create/automobile-create.component';
 import { AutomobileDetailComponent } from './automobile/automobile-detail/automobile-detail.component';
+import { AutomobileSearchComponent } from './automobile/automobile-search/automobile-search.component';
+import { AutomobileSearchResultsComponent } from './automobile/automobile-search-results/automobile-search-results.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { AutomobileDeleteComponent } from './automobile/automobile-delete/automobile-delete.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +22,17 @@ import { AutomobileDetailComponent } from './automobile/automobile-detail/automo
     NavbarComponent,
     FooterComponent,
     AutomobileCreateComponent,
-    AutomobileDetailComponent
+    AutomobileDetailComponent,
+    AutomobileSearchComponent,
+    AutomobileSearchResultsComponent,
+    AutomobileDeleteComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
