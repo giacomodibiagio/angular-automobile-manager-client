@@ -15,6 +15,7 @@ import { AutomobileSearchResultsComponent } from './automobile/automobile-search
 import { NgxPaginationModule } from 'ngx-pagination';
 import { AutomobileDeleteComponent } from './automobile/automobile-delete/automobile-delete.component';
 import { AutomobileEditComponent } from './automobile/automobile-edit/automobile-edit.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,9 @@ import { AutomobileEditComponent } from './automobile/automobile-edit/automobile
     HttpClientModule,
     NgxPaginationModule
   ],
-  providers: [],
+  providers: [
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
